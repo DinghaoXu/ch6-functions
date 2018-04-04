@@ -4,12 +4,17 @@
 # returns whether or not (e.g., a boolean) the length of one argument is greater
 # than or equal to twice the length of the other.
 # Hint: compare the length difference to the length of the smaller string
-
+is_twice_as_long <- function(string_1, string_2) {
+  difference <- abs(nchar(string_1) - nchar(string_2))
+  min <- min(nchar(string_1), nchar(string_2))
+  true_or_false <- difference >= min
+  return(true_or_false)
+}
 
 # Call your `is_twice_as_long` function by passing it different length strings
 # to confirm that it works. Make sure to check when _either_ argument is twice
 # as long, as well as when neither are!
-
+is_twice_as_long(me, him)
 
 
 # Define a function `describe_difference` that takes in two strings. The
